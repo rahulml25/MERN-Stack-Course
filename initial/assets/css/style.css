@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background-color: bisque;
+}
+
+#one {
+  height: 100vh;
+  width: 25vw;
+}
+
+#two {
+  height: 100vh;
+  width: 50vw;
+  background-color: whitesmoke;
+}
+
+#three {
+  height: 100vh;
+  width: 25vw;
+}
+
+#heading {
+  height: 10vh;
+  width: 50vw;
+  background-color: aqua;
+
+  font-size: large;
+  line-height: 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#body1 {
+  height: 20vh;
+  color: white;
+  background-color: #4f45d3;
+}
+
+#body2 {
+  height: 50vh;
+  background-color: hsl(140, 100%, 81%);
+}
+
+#body3 {
+  height: 20vh;
+  background-color: hsl(46, 100%, 81%);
+}
+
+#body1,
+#body2,
+#body3 {
+  padding: 0 1.5rem;
+}

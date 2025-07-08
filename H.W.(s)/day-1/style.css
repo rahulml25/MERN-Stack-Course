@@ -1,0 +1,44 @@
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.collage-logo {
+  position: absolute;
+  left: 0;
+  --size: 50px;
+  height: var(--size);
+  width: var(--size);
+}
+
+main {
+  margin-bottom: 1.5rem;
+}
+
+.collage-pic {
+  width: 100%;
+}
+
+.bold {
+  font-weight: 600;
+}
