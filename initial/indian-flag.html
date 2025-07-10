@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indian Flag</title>
+  </head>
+  <body>
+    <div class="flag">
+      <div class="flag-clr orange"></div>
+      <div class="flag-clr white">
+        <img src="./assets/image/wheel.png" alt="" class="img-ico" />
+      </div>
+      <div class="flag-clr green"></div>
+    </div>
+
+    <div class="center">
+      <div class="wheel">
+        <span class="stick" style="rotate: 0deg"></span>
+        <span class="stick" style="rotate: 15deg"></span>
+        <span class="stick" style="rotate: 30deg"></span>
+        <span class="stick" style="rotate: 45deg"></span>
+        <span class="stick" style="rotate: 60deg"></span>
+        <span class="stick" style="rotate: 75deg"></span>
+        <span class="stick" style="rotate: 90deg"></span>
+        <span class="stick" style="rotate: 105deg"></span>
+        <span class="stick" style="rotate: 120deg"></span>
+        <span class="stick" style="rotate: 135deg"></span>
+        <span class="stick" style="rotate: 150deg"></span>
+        <span class="stick" style="rotate: 165deg"></span>
+        <span class="stick" style="rotate: 180deg"></span>
+      </div>
+    </div>
+
+    <style>
+      .flag {
+        height: 400px;
+        width: 700px;
+        margin: 100px auto;
+        margin-bottom: 20px;
+        border: 1px solid black;
+      }
+
+      .flag-clr {
+        width: 100%;
+        height: 33.33%;
+      }
+
+      .orange {
+        background-color: orange;
+      }
+      .white {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .green {
+        background-color: green;
+      }
+
+      .img-ico {
+        --size: 120px;
+        height: var(--size);
+        height: var(--size);
+      }
+
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .wheel {
+        --size: 120px;
+        width: var(--size);
+        height: var(--size);
+        padding: 1px;
+
+        border: 3px solid blue;
+        border-radius: 9999px;
+
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .wheel .stick {
+        position: absolute;
+        background: blue;
+        height: 90%;
+        width: 2px;
+      }
+    </style>
+  </body>
+</html>

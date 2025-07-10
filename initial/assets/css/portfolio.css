@@ -73,6 +73,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 3px;
+  justify-content: space-between;
 }
 .skills-list span {
   background-color: hsl(224, 100%, 83%);
@@ -84,8 +85,10 @@ h3 {
 
 .projects-grid {
   gap: 4px;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(1px, 1fr));
+  display: flex;
+  /* grid-template-columns: repeat(2, minmax(1px, 1fr)); */
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .project {
@@ -98,6 +101,12 @@ h3 {
   justify-content: center;
   position: relative;
   box-shadow: 1px 2px 4px -3px;
+  /* width: 191px; */
+  width: 48%;
+}
+
+.project.col-full {
+  margin-left: rem;
 }
 
 .project-name {
@@ -110,6 +119,10 @@ h3 {
   inset: 0;
 }
 
+.socials-list {
+  display: flex;
+  justify-content: space-between;
+}
 .socials-list-item {
   background-color: hsl(0, 0%, 84%);
   border-radius: 6px;
