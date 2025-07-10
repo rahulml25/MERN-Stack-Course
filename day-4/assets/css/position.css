@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main {
+  height: 100vh;
+  width: 800px;
+  margin: 0 auto;
+  background-color: aqua;
+  position: relative;
+}
+
+.main .icon {
+  --size: 120px;
+  height: var(--size);
+  width: var(--size);
+  border-radius: 9999px;
+  background: #000;
+  position: absolute;
+
+  /* inset: 50%; */
+  top: 50%;
+  left: 40%;
+  transform: translate3d(-50%, -50%, 0);
+}
