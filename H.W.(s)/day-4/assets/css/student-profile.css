@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1rem 4rem;
+  background-color: hsl(23, 100%, 96%);
+  box-shadow: 0px 4px 5px -7px;
+  margin-bottom: 20px;
+
+  font-size: large;
+  font-weight: 600;
+}
+
+.nav-left,
+.nav-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.nav-left .logo {
+  --size: 30px;
+  height: var(--size);
+  width: var(--size);
+  border-radius: 9999px;
+  background: #e2e2e2;
+}
+
+.cover {
+  position: absolute;
+  inset: 0;
+}
+
+.banner {
+  width: 100%;
+}
+
+.show-case {
+  padding: 3rem 4rem;
+  display: flex;
+  column-gap: 1.2rem;
+}
+
+.grid-layout {
+  display: grid;
+  row-gap: 1rem;
+  column-gap: 0.6rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 50%;
+}
+
+.grid-item img {
+  width: 100%;
+  background: #000;
+  border-radius: 16px;
+}
+
+.table-layout {
+  width: 50%;
+}
+
+.table-view {
+  width: 100%;
+  height: 100%;
+}
+
+.table-view th,
+.table-view td {
+  border: 1px solid #000;
+  padding: 0.25rem 0.5rem;
+}
+.table-view td {
+  text-align: center;
+}
+
+.about-us {
+  padding: 1rem 4rem;
+}
+
+.about-us .heading {
+  font-size: xx-large;
+  margin-bottom: 1rem;
+}
+
+.about-us-content {
+  display: grid;
+  row-gap: 0.8rem;
+}
+
+.about-us-greeting {
+  font-size: large;
+  font-weight: 500;
+}
+
+.footer-bar {
+  padding: 2rem 4rem;
+}
+
+.footer-copyright {
+  color: grey;
+  font-size: small;
+  text-align: center;
+}
