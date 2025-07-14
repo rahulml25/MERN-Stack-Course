@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contacts-bar,
+.location,
+.mail,
+.socials,
+.social-links {
+  display: flex;
+}
+
+.contacts-bar {
+  justify-content: space-between;
+}
