@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Colour Picker</title>
+    <title>Color Picker</title>
     <style>
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -67,6 +67,21 @@
       .colour-yellow {
         background-color: yellow;
       }
+      .reset-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
+      }
+      .reset-button {
+        margin: 0 auto;
+        width: fit-content;
+        padding: 0.4rem 2.3rem;
+        font-size: large;
+        cursor: pointer;
+        border-radius: 5px;
+        border: 1px solid black;
+        box-shadow: 1px 1px 13px -8px;
+      }
     </style>
   </head>
   <body>
@@ -74,18 +89,24 @@
       <h1 id="heading">Welcome To Color Picker!</h1>
 
       <div class="colour-buttons">
-        <button class="colour-red" onclick="setColour('red')">Red</button>
-        <button class="colour-blue" onclick="setColour('#005dff')">Blue</button>
-        <button class="colour-pink" onclick="setColour('pink')">Pink</button>
-        <button class="colour-yellow" onclick="setColour('#ffd100')">
+        <button class="colour-red" onclick="setColor('red')">Red</button>
+        <button class="colour-blue" onclick="setColor('#005dff')">Blue</button>
+        <button class="colour-pink" onclick="setColor('pink')">Pink</button>
+        <button class="colour-yellow" onclick="setColor('#ffd100')">
           Yellow
+        </button>
+      </div>
+
+      <div class="reset-container">
+        <button class="reset-button" onclick="setColor('#f0f4f8')">
+          Reset
         </button>
       </div>
     </main>
 
     <script>
-      function setColour(colour) {
-        document.body.style.backgroundColor = colour;
+      function setColor(color) {
+        document.body.style.backgroundColor = color;
       }
     </script>
   </body>
