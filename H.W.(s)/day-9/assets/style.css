@@ -77,6 +77,10 @@
   align-items: center;
   justify-content: center;
 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
   & img {
     border-radius: 10px;
     --size: 300px;
