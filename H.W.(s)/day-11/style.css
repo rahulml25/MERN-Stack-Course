@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 36rem;
+
+  & > * {
+    margin-bottom: 1.5rem;
+  }
+  & :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 2rem !important;
+}
+
+.lorem-options {
+  & > * {
+    margin-bottom: 0.5rem;
+  }
+  & :last-child {
+    margin-bottom: 0;
+  }
+}
+
+input,
+select {
+  font-size: medium;
+  border: 1px solid rgb(58, 58, 58);
+  border-radius: 5px;
+}
+
+.lorem-option {
+  display: flex;
+  align-items: center;
+
+  & > * {
+    margin-right: 0.5rem;
+  }
+  & :last-child {
+    margin-right: 0;
+  }
+
+  & label {
+    font-weight: 500;
+  }
+
+  & input[type="number"] {
+    width: 2.5rem;
+    text-align: right;
+  }
+}
+
+#content {
+  height: 18rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: aliceblue;
+  padding: 1.5rem 2rem;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.disabled {
+  user-select: none;
+  opacity: 0.5;
+}
+
+.primary-button {
+  padding: 0.5rem 2.5rem;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: medium;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  & > * {
+    margin-right: 1rem;
+  }
+  & :last-child {
+    margin-right: 0;
+  }
+}
+
+.content-container {
+  position: relative;
+}
+
+#copied {
+  position: absolute;
+  display: none;
+  top: -2rem;
+  right: 1rem;
+  color: rgb(19, 182, 32);
+  font-weight: 500;
+  z-index: 1;
+}

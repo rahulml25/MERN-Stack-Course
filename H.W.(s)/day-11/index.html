@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lorem Generator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">Lorem Generator</h1>
+      <div class="lorem-options">
+        <div class="lorem-option">
+          <label for="paragraph-count">No. of Paragraphs:</label>
+          <input type="number" id="paragraph-count" value="2" />
+        </div>
+        <div class="lorem-option">
+          <label for="words-per-para-count"
+            >No. of Words in each Paragraph:</label
+          >
+          <input type="number" id="words-per-para-count" value="6" />
+        </div>
+
+        <div class="lorem-option">
+          <input type="checkbox" id="use-html" checked />
+          <label for="use-html">Use HTML tags?</label>
+        </div>
+        <div class="lorem-option">
+          <label for="html-tag" id="html-tag-label">HTML Tag used:</label>
+          <select id="html-tag">
+            <option value="h1" selected>H1</option>
+            <option value="h2">H2</option>
+            <option value="h3">H3</option>
+            <option value="h4">H4</option>
+            <option value="p">P</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="content-container">
+        <p id="copied">Copied to Clipboard!</p>
+        <div id="content"></div>
+      </div>
+      <div class="center">
+        <button class="primary-button" id="generator">Generate</button>
+        <button class="primary-button" id="copy-text">Copy Text</button>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
