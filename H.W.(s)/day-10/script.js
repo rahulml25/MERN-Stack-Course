@@ -37,6 +37,8 @@ const addToExp = (/** @type {string | number} */ val) => {
     }
 
     if (lastVal === "." && arithmeticOperators.some((opt) => opt === val)) {
+      const beforeLastVal = display.value.slice(0, display.value.length - 1);
+      if (canUseOperator(beforeLastVal)) display.value = beforeLastVal + val;
       return;
     }
   }
@@ -70,9 +72,28 @@ const canUsePoint = (/** @type {string} */ str) => {
   }
 
   const lastNumber = str.slice(i, str.length);
-  console.log(lastNumber);
+  // console.log(lastNumber);
 
   if (!lastNumber) return true;
+  if (!isNaN(parseInt(lastNumber))) return true;
+  return false;
+};
+
+const canUseOperator = (/** @type {string} */ str) => {
+  if (!str.length) return false;
+
+  let i = str.length - 1;
+  for (; i; i--) {
+    // if (str[i] === ".") return false; else
+    if (arithmeticOperators.some((opt) => opt === str[i])) {
+      i++;
+      break;
+    }
+  }
+
+  const lastNumber = str.slice(i, str.length);
+  // console.log("point", lastNumber);
+
   if (!isNaN(parseInt(lastNumber))) return true;
   return false;
 };

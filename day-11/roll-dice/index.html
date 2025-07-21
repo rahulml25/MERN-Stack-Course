@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roll Dice</title>
+  </head>
+  <body>
+    <main>
+      <img src="./sides/img_0.png" alt="dice" id="dice" />
+
+      <br /><br />
+
+      <button onclick="roll()">Roll Dice</button>
+    </main>
+
+    <script>
+      const dice = document.getElementById("dice");
+      const roll = () => {
+        const idx = Math.floor(Math.random() * 6);
+        dice.src = `./sides/img_${idx}.png`;
+      };
+
+      //   setInterval(roll, 1000);
+    </script>
+
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: fit-content;
+      }
+    </style>
+  </body>
+</html>
