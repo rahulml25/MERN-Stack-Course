@@ -45,7 +45,7 @@ const generateLoremContent = () => {
     paras.push(useHtml ? `<${htmlTag}>${paragraph}</${htmlTag}>` : paragraph);
   }
 
-  const content = paras.join(" ");
+  const content = paras.join(useHtml ? " " : "<br/>");
   contentElem.innerHTML = content;
 };
 
@@ -55,14 +55,16 @@ const capitalize = (/** @type {string} */ text) => {
 
 const copyText = () => {
   if (!contentElem.innerHTML) return;
-  navigator.clipboard.writeText(contentElem.innerHTML).then(() => {
-    copiedElem.style.display = "block";
-    setTimeout(() => {
-      copiedElem.style.display = "none";
-      clearTimeout(copiedTimeout);
-      copiedTimeout = null;
-    }, 1000);
-  });
+  navigator.clipboard
+    .writeText(useHtml ? contentElem.innerHTML : contentElem.innerText)
+    .then(() => {
+      copiedElem.style.display = "block";
+      setTimeout(() => {
+        copiedElem.style.display = "none";
+        clearTimeout(copiedTimeout);
+        copiedTimeout = null;
+      }, 1000);
+    });
 };
 
 useHtmlElem.addEventListener("change", (e) => {
