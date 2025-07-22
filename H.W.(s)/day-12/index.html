@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strong Password Generator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Password Strength Checker</h1>
+
+      <div class="inputs">
+        <label for="password">Enter your Password bellow:</label>
+        <input type="text" id="password" placeholder="Password" />
+      </div>
+
+      <ul>
+        <li style="color: red" id="up">Uppercase included.</li>
+        <li style="color: red" id="low">Lowercase included.</li>
+        <li style="color: red" id="num">Numbers included.</li>
+        <li style="color: red" id="sym">Symbols included.</li>
+        <li style="color: red" id="len">Length greater of equal to 8.</li>
+      </ul>
+
+      <p>Password strength: <strong id="strength" class="weak">Weak</strong></p>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
