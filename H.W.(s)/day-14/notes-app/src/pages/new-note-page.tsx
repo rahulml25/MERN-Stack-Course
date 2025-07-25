@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useNavigate } from "react-router";
 import { useNotesActions } from "../store/notesStore";
 
@@ -7,19 +6,15 @@ import MainAppContainer from "../containers/main-app-container";
 
 export default function NewNotePage() {
   const navigate = useNavigate();
-  const { addNote, loadNotes } = useNotesActions();
+  const { addNote } = useNotesActions();
 
   const onSave = (note: Note) => {
     addNote(note);
-    setTimeout(() => navigate("/notes"), 300);
+    navigate("/notes");
   };
 
-  useEffect(() => {
-    loadNotes();
-  }, []);
-
   return (
-    <MainAppContainer className="grid items-center justify-center">
+    <MainAppContainer>
       <NoteEditor title="Create a new note" onSave={onSave} />
     </MainAppContainer>
   );

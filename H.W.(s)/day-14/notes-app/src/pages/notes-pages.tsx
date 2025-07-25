@@ -1,18 +1,11 @@
 import { Link } from "react-router";
-
-import { useEffect } from "react";
-import { useNotes, useNotesActions } from "../store/notesStore";
+import { useNotes } from "../store/notesStore";
 
 import NoteCard from "../components/note-card";
 import MainAppContainer from "../containers/main-app-container";
 
 export default function NotesPage() {
   const notes = useNotes();
-  const { loadNotes } = useNotesActions();
-
-  useEffect(() => {
-    loadNotes();
-  }, []);
 
   return (
     <MainAppContainer className="flex flex-col">
@@ -20,7 +13,7 @@ export default function NotesPage() {
         Notes
       </h1>
 
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {notes.map(({ id, title, content }) => (
           <NoteCard key={id} id={id} title={title} content={content} />
         ))}

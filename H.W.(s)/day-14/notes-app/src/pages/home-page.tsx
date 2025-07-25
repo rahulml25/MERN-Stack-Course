@@ -7,7 +7,7 @@ export default function HomePage() {
       <div className="flex flex-col items-center">
         <img src="/logo.svg" alt="Logo" className="mb-3 size-12" />
         <h1 className="mb-4 text-2xl font-bold">Welcome to Notes App</h1>
-        <p className="mb-8 w-lg text-center text-gray-700">
+        <p className="mb-8 max-w-lg text-center text-gray-700">
           Quickly create, edit, and manage your notes - all in one place.
           Simple, fast and stored in your browser.
         </p>

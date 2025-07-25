@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router";
 import { useNote, useNotesActions } from "../store/notesStore";
 
@@ -6,15 +5,9 @@ import NoteEditor from "../components/note-editor";
 import MainAppContainer from "../containers/main-app-container";
 import NotFoundPage from "./not-found-page";
 
-type Props = {};
-
-export default function EditNotePage({}: Props) {
+export default function EditNotePage() {
   const navigate = useNavigate();
-  const { updateNote, loadNotes } = useNotesActions();
-
-  useEffect(() => {
-    loadNotes();
-  }, []);
+  const { updateNote } = useNotesActions();
 
   const { id } = useParams();
   if (!id) return <NotFoundPage />;
@@ -24,11 +17,11 @@ export default function EditNotePage({}: Props) {
 
   const onSave = (note: Note) => {
     updateNote(note);
-    setTimeout(() => navigate("/notes"), 300);
+    navigate("/notes");
   };
 
   return (
-    <MainAppContainer className="grid items-center justify-center">
+    <MainAppContainer>
       <NoteEditor title="Update Note" onSave={onSave} note={note} />
     </MainAppContainer>
   );

@@ -21,7 +21,7 @@ export default function NoteEditor({ title, note, onSave }: Props) {
   };
 
   return (
-    <div className="my-8 w-md rounded-2xl bg-white px-12 py-10 shadow-xl">
+    <div className="mx-auto my-8 max-w-md rounded-2xl bg-white px-12 py-10 shadow-xl">
       <h1 className="mb-5 text-center text-3xl font-semibold">{title}</h1>
 
       <form onSubmit={onSubmit} className="grid gap-9">
